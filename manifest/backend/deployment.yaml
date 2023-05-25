@@ -28,3 +28,18 @@ spec:
               configMapKeyRef:
                 name: cm-be
                 key: BASE_URL_PORT
+          - name: DATABASE_DATABASE
+            valueFrom:
+              configMapKeyRef:
+                name: cm-be
+                key: DATABASE_DATABASE
+          - name: DATABASE_HOST
+            valueFrom:
+              configMapKeyRef:
+                name: cm-be
+                key: DATABASE_HOST
+          - name: DATABASE_PORT
+            valueFrom:
+              configMapKeyRef:
+                name: cm-be
+                key: DATABASE_PORT
