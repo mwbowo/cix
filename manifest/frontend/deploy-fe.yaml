@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: app-fe
-        image: mwbowo/nodejs:front-end
+        image: mwbowo/cix-fe:1.0
         ports:
         - containerPort: 3000
         env:

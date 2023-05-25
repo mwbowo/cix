@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: cm-fe
 data:
-  REACT_APP_BACKEND_URL: "http://be.kube.mwbowo.my.id"
+  REACT_APP_BACKEND_URL: "http://cilistx.mwbowo.my.id:5000"
