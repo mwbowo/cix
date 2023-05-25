@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  database:
+    container_name: cilist-db
+    image: mwbowo/cilist-db:${GIT_COMMIT_SHORT}
+  
+  backend:
+    container_name: cilist-be
+    image: mwbowo/cilist-be:${GIT_COMMIT_SHORT}
+    ports:
+      - "5000:5000"
+    depends_on:
+      - database
+    environment:
+      - BASE_URL_PORT=5000
+      - MYSQL_ROOT_PASSWORD=s3k0l4hd3v0p5
+      - DATABASE_USERNAME=people
+      - DATABASE_PASSWORD=people
+      - DATABASE_DATABASE=people
+      - DATABASE_HOST=database
+      - DATABASE_PORT=3306
+  
+  frontend:
+    container_name: cilist-fe
+    image: mwbowo/cilist-fe:${GIT_COMMIT_SHORT}
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_BACKEND_URL=http://50.17.17.23:5000
