@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  backend:
+    container_name: cilist-be
+    image: mwbowo/cix-be:1.0
+    ports:
+      - "5000:5000"
+
+  frontend:
+    container_name: cilist-fe
+    image: mwbowo/cix-fe:1.0
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_BACKEND_URL=http://cilistx.mwbowo.my.id:5000
