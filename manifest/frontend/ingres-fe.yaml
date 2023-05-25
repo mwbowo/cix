@@ -7,7 +7,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: fe.kube.mwbowo.my.id
+  - host: lb.mwbowo.my.id
     http:
       paths:
       - pathType: Prefix
