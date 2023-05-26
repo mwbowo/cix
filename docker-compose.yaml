@@ -3,13 +3,13 @@ version: '3.8'
 services:
   backend:
     container_name: cilist-be
-    image: mwbowo/cix-be:1.0
+    image: cix-tes-be
     ports:
       - "5000:5000"
 
   frontend:
     container_name: cilist-fe
-    image: mwbowo/cix-fe:1.0
+    image: cix-tes-fe
     ports:
       - "3000:3000"
     environment:
