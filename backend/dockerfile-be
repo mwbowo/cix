@@ -6,8 +6,8 @@ COPY . /app
 
 RUN apt update && apt install nano -y
 
-DELETE package.json
-DELETE package-lock.json
+RUN rm -rf package.json
+RUN rm -rf package-lock.json
 
 RUN npm init
 
